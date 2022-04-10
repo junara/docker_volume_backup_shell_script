@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: mysql/mysql-server:8.0.28-1.2.7-server # amd64 or arm64
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
